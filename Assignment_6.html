@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Assignment_6.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <title>Login Form</title>
+</head>
+<body >
+    <h1 class="h1">
+        Login Form
+    </h1>
+    <form onsubmit="return verifyPassword()">
+        <div class="login_form">
+            
+            <div class="username_main_div">
+                <div>
+                    Enter Username
+                </div>
+                <div>
+                    <input type="text" placeholder="Username" class="username_input" id="name">
+                </div>
+            </div>
+            <div class="password_main_div">
+                <div>
+                    Enter Password
+                </div>
+                <div>
+                    <input type="password" placeholder="Password" class="Password_input" id="pass">
+                
+                </div>
+            </div>
+            <div>
+                <input class="submit_button" type = "submit" value = "Submit">  
+            </div>
+        </div>
+    </form>
+
+
+    <script>
+        function verifyPassword() 
+        {
+            var pw = document.getElementById("pass").value;
+            var uname = document.getElementById("name").value;
+        
+            if (uname == "") 
+            {
+                alert("Please Enter the username");
+              return false;
+            }
+          
+            if (pw == "") 
+            {
+              alert(" Please Enter the passwrd");
+              return false;
+            }
+          
+            if (pw.length < 8) {
+              alert("Password must be atleast 8 characters long")
+              return false;
+            }
+            else {
+              alert("User Succesfully Logged In");
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
+
+
+
